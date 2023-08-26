@@ -1,13 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text-color: #fff;
+    --text-size: 2rem;
+}
+body{
+    overflow-y: hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .conteiner{
     width: 800px;
     height: 600px;
     display: flex;
     flex-flow:row nowrap;
-    overflow-y: scroll;
-    margin-left: 25vw;
+    overflow: hidden;
     margin-top: 5vh;
     background-color: rgb(0, 0, 0);
-    color: white;
+    color: var(--text-color);
 }
 .stage::-webkit-scrollbar{
     visibility: hidden;
@@ -17,53 +32,44 @@
     margin-right: 1%;
     background-color: wheat;
 }
-.stage{
-    background-color: rgb(133, 133, 133);
-    width: 50%;
-    height: 100%;
-
-}
 .street{
-    overflow: hidden;
-    width: 400px;
+    position: relative;
+    width: 40%;
     height: 100%;
     background-color: rgb(48, 48, 48);
-    
 }
 .street-line-conteiner{
-    background-color: rgb(255, 255, 255);
     position: relative;
     display: flex;
-    flex-flow: column nowrap;
-    top: -500px;
-    left:50%;
-    height: max-content;
-    width: 10px;
+    align-items: center;
+    flex-direction: column;
+    top: -100%;
+    width: 100%;
+    height: 300%;
 }
 .street-line-movement{
     animation: street_line .7s linear .5s infinite normal backwards;
 }
-.street-line-conteiner>div{
+.street-line{
     position: relative;
-    height: 100px;
+    background: #fff;
+    height: 5%;
     width: 10px;
-    background-color: rgb(48, 48, 48);
+    margin-top: 100px;
 }
 .car{
     transition: .3s linear;
     position: absolute;
-    top:calc(630px - 70px);
-    left:550px;
+    top:80%;
+    left:40%;
     height: 70px;
     width: 45px;
-    z-index: 100;
+    z-index: 1000;
 }
 .car >img{
     position: inherit;
     height: 100%;
     width: 100%;
-}
-.mouse-conteiner{
 }
 .mouse-img{
     position: absolute;
@@ -95,10 +101,47 @@
     left:700px;
     top: 700px;
 }
+.entorno{
+    position: relative;
+    margin: 0 10px;
+    width: 20%;
+    height: 100%;
+    background: wheat;
+}
+.data{
+    width: auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    font-size: 35px;
+}
+.speed-contenedor{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 1.3;
+}
+.speed-img{
+    position: absolute;
+    height: 100px;
+    left: 30px;
+    filter: grayscale(.8);
+}
+.speed-aguja{
+    position: absolute;
+    top: 38%;
+    left: 76%;
+    transform-origin: bottom;
+    transform: rotateZ(0deg);
+    transition: .7s ease-in-out;
+    z-index: 100;
+}
  @keyframes street_line{
     0%{
-
-    }100%{
-        transform: translatey(65%);
+    }
+    100%{
+        transform: translatey(20%);
     }
  }

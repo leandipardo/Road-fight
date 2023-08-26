@@ -8,43 +8,41 @@
     <title>Road fight</title> 
 </head>
 <body>
-<section>
-    <div class="conteiner">
+<section class="conteiner">
         <audio src="/assets/X2Download.app - Tití Me Preguntó (8-Bit Bad Bunny Emulation) (128 kbps).mp3" id="bg-music" autoplay></audio>
         <div class="stage-bar"></div>
-        <div class="stage">
-            <div class="street">
-                <div class="street-line-conteiner street-line-movement">
-                    <div style="background-color: white; height: 60px;"></div>
-                    <div></div>
-                    <div style="background-color: white; height: 60px;"></div>
-                    <div></div>
-                    <div style="background-color: white; height: 60px;"></div>
-                    <div></div>
-                    <div style="background-color: white; height: 60px;"></div>
-                    <div></div>
-                    <div style="background-color: white; height: 60px;"></div>
-                    <div></div>
-                    <div style="background-color: white; height: 60px;"></div>
-                    <div></div>
-                    <div style="background-color: white; height: 60px;"></div>
-                </div>
-                <div class="car">
-                    <img src="/assets/Capa 2.png" alt="">
-                </div>
+        <div class="street">
+            <div class="street-line-conteiner street-line-movement">
+                <div class="street-line"></div>
+                <div class="street-line"></div>
+                <div class="street-line"></div>
+                <div class="street-line"></div>
+                <div class="street-line"></div>
+                <div class="street-line"></div>
+            </div>
+            <div class="car">
+                <img src="/assets/Capa 2.png" alt="">
             </div>
         </div>
+        <div class="entorno"></div>
         <div class="data">
-            <p>fuel</p>
+            <p class="nafta">Fuel:</p>
+            <div class="nafta-img"></div>
+            <p class="velocidad">Speed:</p>
+            <div class="speed-contenedor">
+                <img src="assets/Velocimetro.png" class="speed-img">
+                <img src="assets/aguja.png" class="speed-aguja">
+            </div>
+            <p class="Score">Score:</p>
+            <div class="score-img"></div>
         </div>
+    </section>
+    <div class="mouse-conteiner">
+        <img class="click-derecho"src="/assets/click derecho.png" alt="">
+        <img src="/assets/scroll.png" alt="scroll" class="scroll-button">
+        <img src="/assets/click izq.png" alt="click izq" class="click-izquierdo">
+        <img class="mouse-img" src="/assets/mouse.png" alt="mouse">
     </div>
-</section>
-<div class="mouse-conteiner">
-    <img class="click-derecho"src="/assets/click derecho.png" alt="">
-    <img src="/assets/scroll.png" alt="scroll" class="scroll-button">
-    <img src="/assets/click izq.png" alt="click izq" class="click-izquierdo">
-    <img class="mouse-img" src="/assets/mouse.png" alt="mouse">
-</div>
 <script src="/js/modulos.js" type="module"></script>
 </body>
 </html>

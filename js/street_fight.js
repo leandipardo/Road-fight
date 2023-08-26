@@ -1,9 +1,10 @@
 let d=document,
 direccion=0,
-animacionLineas=0.9,
+animacionLineas=.7,
 ejeX=0,
 ejeY=0,
 kmh=0,
+$speed = d.querySelector(".speed-aguja"),
 $car = d.querySelector(".car"),
 $street = d.querySelector(".street"),
 $linea = d.querySelector(".street-line-conteiner"),
@@ -24,13 +25,13 @@ d.addEventListener("mousedown",(e)=>{
 },100);
 if(e.buttons===1){
     $clickIzqImg.style.opacity = "100%";
-    kmh=kmh-50;
+    kmh=kmh-25;
     animacionLineas=animacionLineas+(animacionLineas / 10);
     
 }
 if(e.buttons===2){
     $clickDerImg.style.opacity = "100%";
-    kmh=kmh+50;
+    kmh=kmh+25;
     animacionLineas=animacionLineas-(animacionLineas / 10);
 }
 })
@@ -41,13 +42,15 @@ if(e.buttons===2){
 
 //movimiento rueda de mouse.
 export function streetFight(e){
+    let posC = $car.getBoundingClientRect();
+    let posS = $street.getBoundingClientRect();
     if(e.deltaY === 100){
         ejeX=ejeX+30;
         direccion=direccion+15;
     }
-    if(e.deltaY === -100){
-        ejeX=ejeX-30;
-        direccion=direccion-15;
+    if (e.deltaY === -100) {
+      ejeX = ejeX - 30;
+      direccion = direccion - 15;
     }
 }
 
@@ -60,9 +63,8 @@ export function lineaIntervalos(){
     }, 16);
     setInterval(() => {
         direccion=0;
-        console.log(`VELOCIDAD = [${150 + kmh}KM/H] // VELOCIDAD ESTABLE = 150KM/H`)
+        $speed.style.transform = `rotateZ(${kmh}deg)`;
         $linea.style.animationDuration=`${animacionLineas}s`;
-        console.log(animacionLineas);
     }, 250);
     setInterval(()=>{
         $clickIzqImg.style.opacity = "0%";
