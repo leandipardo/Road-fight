@@ -10,7 +10,6 @@ $linea = d.querySelector(".street-line-conteiner"),
 $clickIzqImg = d.querySelector(".click-izquierdo"),
 $clickDerImg = d.querySelector(".click-derecho"),
 $scrollBtn = d.querySelector(".scroll-button");
-
 //click derecho e izquierdo, velocidad, animacion de la calle.
 d.addEventListener("mousedown",(e)=>{
     e.preventDefault();
