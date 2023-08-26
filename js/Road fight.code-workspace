@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../SPA"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "SPA"
+  }
+}
