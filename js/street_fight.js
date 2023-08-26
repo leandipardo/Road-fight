@@ -23,13 +23,12 @@ d.addEventListener("mousedown",(e)=>{
             ejeY--;
     }
 },100);
-if(e.buttons===1){
-    $clickIzqImg.style.opacity = "100%";
-    kmh=kmh-25;
-    animacionLineas=animacionLineas+(animacionLineas / 10);
-    
+if (e.buttons === 1) {
+  $clickIzqImg.style.opacity = "100%";
+  kmh = kmh - 25;
+  animacionLineas = animacionLineas + animacionLineas / 10;
 }
-if(e.buttons===2){
+if(e.buttons===2{
     $clickDerImg.style.opacity = "100%";
     kmh=kmh+25;
     animacionLineas=animacionLineas-(animacionLineas / 10);
@@ -59,7 +58,7 @@ export function streetFight(e){
 //linea de tiempo y correccion de direccion.
 export function lineaIntervalos(){
     setInterval(() => {
-        $car.style.transform =`translatex(${ejeX}px)translatey(${ejeY*2}px)rotateZ(${direccion}deg)`
+        $car.style.transform =`translatex(${ejeX}px)translatey(${ejeY*6}px)rotateZ(${direccion}deg)`
     }, 16);
     setInterval(() => {
         direccion=0;
