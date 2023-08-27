@@ -28,7 +28,7 @@ if (e.buttons === 1) {
   kmh = kmh - 25;
   animacionLineas = animacionLineas + animacionLineas / 10;
 }
-if(e.buttons===2{
+if(e.buttons===2){
     $clickDerImg.style.opacity = "100%";
     kmh=kmh+25;
     animacionLineas=animacionLineas-(animacionLineas / 10);
