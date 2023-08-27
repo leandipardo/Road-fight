@@ -16,11 +16,10 @@ d.addEventListener("mousedown",(e)=>{
     e.preventDefault();
     setInterval(() => {
     if(e.buttons===1){
-            ejeY++;
-
+        ejeY++;
     }
     if(e.buttons===2){
-            ejeY--;
+        ejeY--;
     }
 },100);
 if (e.buttons === 1) {
@@ -45,11 +44,11 @@ export function streetFight(e){
     let posS = $street.getBoundingClientRect();
     if(e.deltaY === 100){
         ejeX=ejeX+30;
-        direccion=direccion+15;
+        direccion=direccion+20;
     }
     if (e.deltaY === -100) {
-      ejeX = ejeX - 30;
-      direccion = direccion - 15;
+        ejeX = ejeX - 30;
+        direccion = direccion - 20;
     }
 }
 
@@ -59,12 +58,12 @@ export function streetFight(e){
 export function lineaIntervalos(){
     setInterval(() => {
         $car.style.transform =`translatex(${ejeX}px)translatey(${ejeY*6}px)rotateZ(${direccion}deg)`
-    }, 16);
+    },16);
     setInterval(() => {
         direccion=0;
         $speed.style.transform = `rotateZ(${kmh}deg)`;
         $linea.style.animationDuration=`${animacionLineas}s`;
-    }, 250);
+    }, 100);
     setInterval(()=>{
         $clickIzqImg.style.opacity = "0%";
         $clickDerImg.style.opacity = "0%";
