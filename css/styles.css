@@ -145,3 +145,8 @@ body{
         transform: translatey(20%);
     }
  }
+ .text-info-conteiner{
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
